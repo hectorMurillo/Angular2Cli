@@ -1,0 +1,30 @@
+<h1>Template Drive Form</h1>
+<hr>
+<form #form="ngForm" (submit)="onSubmit(form.value)">
+	<div>
+		<label for="nombre">Nombre:</label>
+		<input type="text" #nombreRef minlength="4" required name="nombre" ngModel>
+		<!-- {{consoleLog(nombreRef)}} -->
+		<span>{{nombreRef.className}}</span>
+	</div>
+	<div>
+		<label for="apellido">Apellido:</label>
+		<input type="text" #apellidoRef="ngModel" required minlength="4" name="apellido" ngModel>
+		<!-- {{consoleLog(apellidoRed)}} -->
+		<div *ngIf="apellidoRef.errors && (apellidoRef.touched || apellidoRef.dirty)">
+			<label [hidden]="!apellidoRef.errors.required">
+				Apellido es requerido
+			</label>
+			<label [hidden]="!apellidoRef.errors.minlength">
+				Debe tener al menos 4 dígitos
+			</label>
+		</div>
+	</div>
+	<div>
+		<label for="direccion">Dirección:</label>
+		<input type="text" name="direccion" ngModel>
+	</div>
+	<div>
+		<input type="submit" [disabled]="!form.valid">
+	</div>
+</form>

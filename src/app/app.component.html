@@ -1,0 +1,56 @@
+<!-- <h1>
+  {{title}}
+</h1>
+<h2>
+	{{body}}
+</h2>
+
+<button (click)="getItems()">Click</button>
+
+<div *ngIf="!show">
+	<p>OCULTAR</p>
+</div>
+
+<section>
+<button (click)="onShow()">{{btnTitle}}</button>
+<button (click)="onShow()">{{show ? 'Mostrar' : 'Ocultar'}}</button>
+</section>
+
+<div *ngFor="let item of items; let i = index ">
+	<div [ngClass]="ponerEstilo(i)">
+		<span [ngStyle]="{'font-size': ((i+1)*5) + 'pt'}">{{item}}</span> <span>{{i}}</span>
+		<button (click)="quitarItem(i)">Quitar</button>
+		<button (click)="seleccionarItem(i)">Seleccionar</button>
+	</div>
+</div>
+
+<button (click)="agregaItems()" [ngStyle]="{'background-color': color, 'color': 'white'}">Agregar</button>
+
+<div [ngSwitch]="itemSeleccionado">
+	<span *ngSwitchCase="0">{{items[itemSeleccionado]}} CERO</span>
+	<span *ngSwitchCase="1">{{items[itemSeleccionado]}} UNO</span>
+	<span *ngSwitchCase="2">{{items[itemSeleccionado]}} DOS</span>
+	<span *ngSwitchCase="3">{{items[itemSeleccionado]}} TRES</span>
+</div>
+
+<button></button> -->
+
+<!-- <app-td-form></app-td-form>
+
+<hr>
+
+<app-mdform></app-mdform>
+
+<ngb-datepicker></ngb-datepicker>
+
+<div class="alert alert-danger"><p>Peligro</p></div>
+
+<a href="#" class="btn btn-success">Registrar</a> -->
+
+<app-navbar></app-navbar>
+<div class="container-fluid">
+	<br>
+	<div class="row">
+		<router-outlet></router-outlet>
+	</div>
+</div>

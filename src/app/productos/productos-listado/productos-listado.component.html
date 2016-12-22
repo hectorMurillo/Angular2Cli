@@ -1,0 +1,29 @@
+<section class="encabezado">
+	<br>
+	<h2>Catálogo de Productos</h2>
+	<hr>
+</section>
+<section class="contenedor">
+	<article class="table-responsive">
+		<table class="table table-hover table-sm ">
+			<thead class="thead-inverse">
+				<tr>
+					<th>ID</th>
+					<th>Código</th>
+					<th>Nombre</th>
+					<th>Precio</th>
+					<th></th>					 
+				</tr>
+			</thead>
+				<tr *ngFor="let prod of productos">
+					<td>{{prod.id}}</td>
+					<td>{{prod.codigo}}</td>
+					<td>{{prod.nombre}}</td>
+					<td>{{prod.precio}}</td>
+					<td><a href="#" [routerLink]="[prod.id]" class="btn btn-primary btn-sm">Editar </a></td>
+				</tr>			
+			<tbody>				
+			</tbody>
+		</table>
+	</article>
+</section>

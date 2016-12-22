@@ -1,0 +1,15 @@
+#contenedor{
+	margin-left: 200px;
+}
+
+input.ng-invalid{
+	border: 2px solid red;
+}
+
+input.ng-valid{
+	border: 2px solid green;
+}
+
+input.ng-untouched.ng-pristine.ng-invalid{
+	border: 1px;
+}

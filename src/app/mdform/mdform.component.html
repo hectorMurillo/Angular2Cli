@@ -1,0 +1,28 @@
+<h1>Model Drive Form</h1>
+<hr>
+<form [formGroup]="form" (submit)="onSubmit()" novalidate>
+	<div>
+		<label for="nombre">Nombre:</label>
+		<input type="text" formControlName="nombre" class="form-control">
+		<div *ngIf="form.controls['nombre'].hasError('required')">
+			Incorrecto requerido !
+		</div>
+		<div *ngIf="form.controls['nombre'].hasError('minlength')">
+			Incorrecto minLength !
+		</div>
+		<div *ngIf="form.controls['nombre'].hasError('filtraNombre')">
+			Nombre no puede ser memo
+		</div>
+	</div>
+	<div>
+		<label for="apellido">Apellido:</label>
+		<input type="text" formControlName="apellido" class="form-control">
+	</div>
+	<div>
+		<label for="direccion">Dirección:</label>
+		<input type="text" formControlName="direccion" class="form-control">
+	</div>
+	<div>
+		<input type="submit">
+	</div>
+</form>
